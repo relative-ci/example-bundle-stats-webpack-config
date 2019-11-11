@@ -44,7 +44,7 @@
     "webpack-stats-plugin": "0.3.0"
   },
   "dependencies": {
-    "@relative-ci/agent": "^1.2.0",
+    "@relative-ci/agent": "1.2.0",
     "core-js": "3.4.0",
     "modern-css-reset": "1.0.4",
     "react": "16.11.0",
