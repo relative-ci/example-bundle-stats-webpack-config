@@ -47,8 +47,8 @@
     "@relative-ci/agent": "1.2.0",
     "core-js": "3.6.4",
     "modern-css-reset": "1.1.0",
-    "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
   },
   "husky": {
     "hooks": {
