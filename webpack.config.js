@@ -62,6 +62,7 @@ module.exports = (_, { mode }) => ({
 		}),
 		new BundleStatsWebpackPlugin({
 			outDir: "../artifacts",
+			baseline: true,
 			stats: {
 				excludeAssets: [/artifacts/]
 			}
