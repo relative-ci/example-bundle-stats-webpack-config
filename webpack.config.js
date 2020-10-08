@@ -11,21 +11,21 @@ const DIST = path.join(__dirname, "dist");
 module.exports = (_, { mode }) => ({
 	context: CONTEXT,
 	entry: {
-		app: "./index.jsx"
+		app: "./index.jsx",
 	},
 	output: {
 		path: DIST,
-		filename: mode === "production" ? "[name].[contenthash:8].js" : "[name].js"
+		filename: mode === "production" ? "[name].[contenthash:8].js" : "[name].js",
 	},
 	resolve: {
-		extensions: [".js", ".jsx", ".json"]
+		extensions: [".js", ".jsx", ".json"],
 	},
 	module: {
 		rules: [
 			{
 				test: /\.jsx?$/,
 				loader: "babel-loader",
-				exclude: /node_modules/
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.css$/,
@@ -33,11 +33,11 @@ module.exports = (_, { mode }) => ({
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							hmr: mode === "production"
-						}
+							hmr: mode === "production",
+						},
 					},
-					"css-loader"
-				]
+					"css-loader",
+				],
 			},
 			{
 				test: /\.(jpg|png|gif|webp|svg)$/,
@@ -46,39 +46,41 @@ module.exports = (_, { mode }) => ({
 					name:
 						mode === "production"
 							? "[path][name].[contenthash:8].[ext]"
-							: "[path][name].[ext]"
-				}
-			}
-		]
+							: "[path][name].[ext]",
+				},
+			},
+		],
 	},
 	plugins: [
 		new HtmlPlugin({
 			template: "index.html",
-			filename: "index.html"
+			filename: "index.html",
 		}),
 		new MiniCssExtractPlugin({
 			filename:
-				mode === "production" ? "[name].[contenthash:8].css" : "[name].css"
+				mode === "production" ? "[name].[contenthash:8].css" : "[name].css",
 		}),
 		new BundleStatsWebpackPlugin({
 			outDir: "../artifacts",
 			baseline: true,
 			stats: {
-				excludeAssets: [/artifacts/]
-			}
+				excludeAssets: [/artifacts/],
+			},
 		}),
 		new StatsWriterPlugin({
 			filename: "../artifacts/webpack-stats.json",
 			stats: {
 				all: true,
-				source: false
-			}
+				source: false,
+			},
 		}),
-		new RelativeCiAgentWebpackPlugin()
+		new RelativeCiAgentWebpackPlugin({
+			enabled: Boolean(process.env.CIRCLE_CI),
+		}),
 	],
 	optimization: {
 		runtimeChunk: {
-			name: "runtime"
+			name: "runtime",
 		},
 		splitChunks: {
 			cacheGroups: {
@@ -87,9 +89,9 @@ module.exports = (_, { mode }) => ({
 					chunks: "initial",
 					name: "vendor",
 					priority: 10,
-					enforce: true
-				}
-			}
-		}
-	}
+					enforce: true,
+				},
+			},
+		},
+	},
 });
