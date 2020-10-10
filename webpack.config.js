@@ -75,7 +75,7 @@ module.exports = (_, { mode }) => ({
 			},
 		}),
 		new RelativeCiAgentWebpackPlugin({
-			enabled: Boolean(process.env.CIRCLE_CI),
+			enabled: Boolean(process.env.CIRCLECI),
 		}),
 	],
 	optimization: {
