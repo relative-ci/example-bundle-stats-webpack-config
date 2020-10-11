@@ -70,7 +70,10 @@ module.exports = (_, { mode }) => ({
 		new StatsWriterPlugin({
 			filename: "../artifacts/webpack-stats.json",
 			stats: {
-				all: true,
+				context: CONTEXT,
+				assets: true,
+				chunks: true,
+				modules: true,
 				source: false,
 			},
 		}),
