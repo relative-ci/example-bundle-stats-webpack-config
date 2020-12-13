@@ -29,15 +29,7 @@ module.exports = (_, { mode }) => ({
 			},
 			{
 				test: /\.css$/,
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader,
-						options: {
-							hmr: mode === "production",
-						},
-					},
-					"css-loader",
-				],
+				use: [MiniCssExtractPlugin.loader, "css-loader"],
 			},
 			{
 				test: /\.(jpg|png|gif|webp|svg)$/,
