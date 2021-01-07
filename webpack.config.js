@@ -69,6 +69,7 @@ module.exports = (_, { mode }) => ({
 		new RelativeCiAgentWebpackPlugin({
 			enabled: Boolean(process.env.CIRCLECI),
 			stats: {
+				ids: true,
 				excludeAssets: [/artifacts/, /node_modules/],
 			},
 		}),
