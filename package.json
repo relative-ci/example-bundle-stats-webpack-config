@@ -41,7 +41,7 @@
     "rimraf": "3.0.2",
     "webpack": "5.12.2",
     "webpack-cli": "4.3.1",
-    "webpack-dev-server": "3.11.1",
+    "webpack-dev-server": "3.11.2",
     "webpack-stats-plugin": "1.0.3"
   },
   "dependencies": {
