@@ -45,6 +45,7 @@
     "webpack-stats-plugin": "1.0.3"
   },
   "dependencies": {
+    "@stitches/react": "0.0.2",
     "core-js": "3.9.1",
     "modern-css-reset": "1.4.0",
     "react": "17.0.1",
