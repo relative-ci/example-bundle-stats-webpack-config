@@ -1,10 +1,8 @@
 import React from "react";
-import { createStyled } from "@stitches/react";
+import { styled } from "@stitches/react";
 
 import logoUrl from "./img/bundle-stats.png";
 import "./app.css";
-
-const { styled } = createStyled({});
 
 const Container = styled('div', {
   margin: '0 auto',
