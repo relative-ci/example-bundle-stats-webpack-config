@@ -1,17 +1,37 @@
 import React from "react";
+import { styled } from "@stitches/react";
 
 import logoUrl from "./img/bundle-stats.png";
 import "./app.css";
 
+const Container = styled('div', {
+  margin: '0 auto',
+  width: '100%',
+  maxWidth: '640px',
+});
+
+const Header = styled('header', {
+  textAlign: 'center',
+});
+
+const Title = styled('h1', {
+  margin: '0 0 1rem',
+});
+
+const Logo = styled('img', {
+	display: 'inline-block',
+	width: '128px',
+});
+
 export const App = () => (
-	<div className="container">
-		<header className="header">
-			<h1 className="header__title">
-				<img className="header__logo" src={logoUrl} alt="BundleStats" />
-			</h1>
-			<p className="header__description">
-				BundleStats example for custom webpack config
-			</p>
-		</header>
-	</div>
+  <Container>
+    <Header>
+      <Title>
+        <Logo src={logoUrl} alt="BundleStats" />
+      </Title>
+      <p className="header__description">
+        BundleStats example for custom webpack config
+      </p>
+    </Header>
+  </Container>
 );
