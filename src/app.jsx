@@ -11,7 +11,7 @@ export const App = () => (
 			</h1>
 			<p className="header__description">
 				BundleStats example for custom webpack config
-        PR test
+        PR test 2
 			</p>
 		</header>
 	</div>
