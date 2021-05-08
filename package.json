@@ -28,7 +28,7 @@
     "@babel/preset-react": "7.13.13",
     "@relative-ci/agent": "1.5.0",
     "babel-loader": "8.2.2",
-    "bundle-stats-webpack-plugin": "2.8.0",
+    "bundle-stats-webpack-plugin": "2.8.2",
     "cross-env": "7.0.3",
     "css-loader": "5.2.4",
     "file-loader": "6.2.0",
