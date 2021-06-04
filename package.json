@@ -33,19 +33,20 @@
     "css-loader": "5.2.6",
     "file-loader": "6.2.0",
     "file-url": "4.0.0",
-    "html-webpack-plugin": "5.3.1",
+    "html-webpack-plugin": "^4.5.2",
     "husky": "6.0.0",
     "lint-staged": "11.0.0",
     "mini-css-extract-plugin": "1.6.0",
     "prettier": "2.3.0",
     "rimraf": "3.0.2",
-    "webpack": "5.38.1",
+    "webpack": "4.44.1",
     "webpack-cli": "4.7.0",
     "webpack-dev-server": "3.11.2",
     "webpack-stats-plugin": "1.0.3"
   },
   "dependencies": {
     "core-js": "3.13.1",
+    "date-fns": "^2.22.1",
     "modern-css-reset": "1.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
