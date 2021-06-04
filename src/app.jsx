@@ -1,5 +1,5 @@
 import React from "react";
-import { format } from "date-fns";
+import { format, formatDistanceToNow } from "date-fns";
 
 import logoUrl from "./img/bundle-stats.png";
 import "./app.css";
@@ -14,7 +14,8 @@ export const App = () => (
 				BundleStats example for custom webpack config
 			</p>
       <p className="header_date">
-        {format(new Date(), 'MM/dd/yyyy')}
+        Today: {format(new Date(), 'MM/dd/yyyy')}<br />
+        Created: {formatDistanceToNow(new Date(2019, 7, 1))}
       </p>
 		</header>
 	</div>
