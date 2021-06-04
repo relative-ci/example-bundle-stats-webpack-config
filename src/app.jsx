@@ -1,5 +1,5 @@
 import React from "react";
-import { differenceInDays, format, formatDistanceToNow } from "date-fns";
+import { addDays, differenceInDays, format, formatDistanceToNow } from "date-fns";
 
 import logoUrl from "./img/bundle-stats.png";
 import "./app.css";
@@ -18,7 +18,8 @@ export const App = () => (
       <p className="header_date">
         Today: {format(new Date(), 'MM/dd/yyyy')}<br />
         Created: {formatDistanceToNow(CREATED)}<br />
-        Days since created: {differenceInDays(newDate(), CREATED)}
+        Days since created: {differenceInDays(new Date(), CREATED)}< br/>
+        In 7 days: {format(addDays(new Date(), 7), 'MM/dd/yyyy')}
       </p>
 		</header>
 	</div>
