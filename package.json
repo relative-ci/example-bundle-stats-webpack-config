@@ -35,7 +35,7 @@
     "file-url": "4.0.0",
     "html-webpack-plugin": "5.3.1",
     "husky": "6.0.0",
-    "lint-staged": "11.0.0",
+    "lint-staged": "11.0.1",
     "mini-css-extract-plugin": "1.6.0",
     "prettier": "2.3.1",
     "rimraf": "3.0.2",
