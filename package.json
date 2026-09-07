@@ -42,7 +42,7 @@
     "webpack": "5.110.3",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "5.2.6",
-    "webpack-stats-plugin": "1.0.3"
+    "webpack-stats-plugin": "1.1.3"
   },
   "dependencies": {
     "core-js": "3.19.0",
